@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Janssen</title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://silviomoreto.github.io/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+        <link href="css/style.css" rel="stylesheet" />
+
+    <!--[if lte IE 9]>
+    <link href="assets/plugins/codrops-dialogFx/dialog.ie.css" rel="stylesheet" type="text/css" media="screen" />
+    <![endif]-->
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid jassen_head example2">
+                <div class="row">
+                    <div class="col-md-8">
+                        <nav class="navbar">
+                            <div class="container-fluid">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" href="#">
+                                        <img src="images/logo.png" alt="Jassen" class="img-responsive">
+                                    </a>
+                                </div>
+                                <div class="jassen_brief1">
+                                    <h4>
+                                        Prostate Cancer Advisory Boards Debrief<br />
+                                        <small>
+                                            November, 2017
+                                        </small>
+                                    </h4>
+                                </div>
+                                <!--/.nav-collapse -->
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="col-md-4 filter">
+                        <div class="third_div">
+                            <div class="col-md-2">
+                                <h2>Filter</h2>
+                            </div>
+                            <div class="col-md-10 all_meetings">
+                                <select id="select_meeting" class="selectpicker" data-live-search="true">
+                                    <option value="">All Meetings</option>
+                                    <option value="Montreal Meeting" data-tokens="Montreal Meeting">Montreal Meeting</option>
+                                    <option value="Toronto Meeting" data-tokens="Toronto Meeting">Toronto Meeting</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#">Meeting Attendence</a>
+                </li>
+                <li class="active1" id="ACT_MontrealMeeting">
+                    <a href="#">Montreal Meeting</a>
+                </li>
+
+                <li class="co_chair" id="mont_chair1">
+
+                </li>
+				<li class="co_chair" id="mont_chair2">
+
+                </li>
+                <!--<li class="co_chair" id="Co-Chair2">
+
+                </li>-->
+				<li id="Montreal_Meeting">
+
+                </li>
+
+                <li class="active1 active2" id="ACT_TORONTOMEETING">
+                    <a href="#">TORONTO MEETING</a>
+                </li>
+                <li class="co_chair" id="tor_chair1">
+
+                </li>
+                <li class="co_chair" id="tor_chair2">
+
+                </li>
+                <li id="Toranto_Meeting">
+
+                </li>
+
+            </ul>
+        </nav>
+        <!-- Page Content Holder -->
+        <div id="content">
+            <nav class="navbar">
+                <div class="container-fluid view">
+                    <div class="navbar-header">
+                        <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                            <span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;&nbsp;
+                            <span>Close Attendee List</span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <div class="content_data">
+                <h5>The objectives of these programs were to:</h5>
+                <ul class="engage">
+                    <li>Engage community urologists in a discussion linking pharmacology with clinical findings</li>
+                    <li>Introduce SPARTAN and apalutamide in the nmCRPC space</li>
+                    <li>Introduce metastasis-free survival (MFS) and discuss non-OS endpoint</li>
+                    <li>Gather insights into corporate differentiating strategies</li>
+                </ul>
+                <div class=" cloud">
+                    <h3>Patient risk factors associated with each treatment</h3>
+                    <div class="col-md-6 charts_cloud">
+                        <div class="">
+                            <div id="container"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 charts_cloud1">
+                        <div class="">
+                            <div id="container1"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                    <div class="col-md-12 ques">
+                        <h3>Surrogate endpoints were well-received</h3>
+                        <p>Please rank the following outcomes in order of how significantly they impact your patient management decisions <br /> (1 is at least significant, 5 is most significant)</p>
+                        <div id="BarChart"></div>
+                    </div>
+
+
+
+
+                <div class="col-md-12 ques">
+                    <div class="col-md-7">
+                        <div class="">
+                            <h3>Minimum time for MFS to be acceptable is ~6months</h3>
+                            <p>
+                                "What level of change in MFS would be required for you to
+                                prescribe a new drug in the nmCRPC space?"
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+					<div class="">
+                        <div id="6month_div"></div>
+                    </div>
+                        <!--<img src="images/image.jpg" class="img-responsive" alt="" />-->
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 ques">
+                        <div class="">
+                            <h3>
+                                Education identified as the most important item Janssen will need to address for the launch of
+                                apalutamide
+                            </h3>
+                            <p>In your opinion, what are the most important items Janssen will need to do for a launch of apalutamide?</p>
+                        </div>
+                        <!--<img src="images/image1.jpg" class="img-responsive" alt="" style="margin: 0 auto;" />-->
+						<div class="">
+                        <div id="education_div"></div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 ques">
+                    <div class="col-md-6">
+                        <div class="">
+                            <h3>
+                                The BioAdvance program could be a significant
+                                corporate differentiating factor for Janssen
+                            </h3>
+                            <p class="">
+                                How influential would the availability of a well-designed patient
+                                support program linked across the prostate cancer continuum be
+                                towards your prostate cancer treatment choice?
+                            </p>
+                        </div>
+                        <div id="PieChart"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="">
+                            <h3>
+                                Physicians will consider broadening PSADT
+                                criteria for treating nmCRPC
+                            </h3>
+                            <p class="">
+                                The Phase III Clinical trial SPARTAN investigated the effects of
+                                Apalutamide on nm-CRPC. The PSADT for patient inclusion in
+                                this trial was < 10 months. If Apalutamide is approved for
+                                nm-CRPC would you consider broadening your inclusion criteria
+                                for therapy initiation in nm-CRPC?
+                            </p>
+                        </div>
+                        <div id="PieChart1"></div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 ques">
+                    <div class="col-md-7">
+                        <div class="minimum">
+                            <h3>
+                                Promoting PSADT measurements shows physician intent to change
+                            </h3>
+                            <p>There was a 32% increase in the proportion of physicians who declared they would measure PSADT every time they checked PSA </p>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div id="BarChart1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel="stylesheet" href="https://naver.github.io/billboard.js/release/latest/dist/billboard.min.css" />
+    <script src="https://naver.github.io/billboard.js/release/latest/dist/billboard.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/wordcloud.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://silviomoreto.github.io/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+
+
+</body>
+</html>
